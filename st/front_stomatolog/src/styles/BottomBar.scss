@@ -1,0 +1,54 @@
+*, *::before, *::after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+.bottom-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+
+    .btn-bar {
+            display: flex;
+            flex-direction: column;
+            align-items: center;  /* Центрирование по горизонтали */
+            justify-content: center;  /* Центрирование по вертикали */
+            text-align: center;  /* Выравнивание текста по центру */
+            cursor: pointer;
+            margin: 0 10px;  /* Примерное расстояние между кнопками */
+
+        .img-sp{
+            display: flex;
+            white-space: nowrap;
+            font-size: 10px;
+        }
+
+        .img-btn{
+            display: flex;
+            max-width: 24px;
+            height: auto;
+        }
+
+
+
+        
+      }
+  }
+  .btn-bar:hover {
+    background-color: #ddd;
+    color: #333;
+  }
+  
+  
+  
+  @media screen and (min-width: 561px) {
+    .bottom-bar {
+      display: none;
+    }
+}

@@ -1,0 +1,66 @@
+.enter-container {
+  width: 100%; }
+
+.enter-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding-left: 10px;
+  border-radius: 20px; }
+
+.wrapperWelcome {
+  width: 80vw;
+  margin: 20px 20px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #c2c2c2;
+  border-radius: 10px;
+  background-color: rgba(215, 215, 215, 0.1); }
+  .wrapperWelcome .welcomeText {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+
+.enterForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 340px; }
+
+.formGroup {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px; }
+  .formGroup label {
+    display: flex;
+    margin-bottom: 5px; }
+  .formGroup .reg-input {
+    width: 250px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid;
+    border-radius: 10px;
+    outline: none;
+    background: none;
+    box-shadow: none;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit; }
+
+.button-style {
+  background: none;
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  margin-bottom: 10px; }
+
+.enter-link {
+  text-decoration: none; }
+
+/*# sourceMappingURL=Auth.css.map */

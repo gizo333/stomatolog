@@ -1,0 +1,14 @@
+@mixin default-container {
+    width: 100%;
+    
+}
+
+
+@mixin default-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding-left: 10px;
+    border-radius: 20px;
+}

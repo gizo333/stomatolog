@@ -1,0 +1,334 @@
+*, *::before, *::after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.header{
+    width: 100%;
+}
+
+.whts{
+    width: 30px;
+    height: auto;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: rgb(52, 52, 52);
+
+}
+.telegr{
+    width: 30px;
+    height: auto;
+    cursor: pointer;
+    margin-left: 10px;
+    border-radius: 50%;
+    background-color: rgb(52, 52, 52);
+}
+
+.metro{
+    width: 30px;
+    height: auto;
+    margin-right: 10px;
+}
+
+
+.medic{
+    width: 200px;
+    height: auto;
+    margin: 10px 0 10px 0;
+
+}
+
+.logo{
+    display: flex;
+    width: 40px;
+    height: auto;
+    margin-left: 5px;
+}
+
+.search-icon{
+    width: 60px;
+    height: auto;
+    padding-right: 20px;
+    cursor: pointer;
+    z-index: 9999;
+    position: relative;
+}
+
+
+.navlink{
+    text-decoration: none;
+  color: inherit;
+}
+
+.header-top-cont{
+    display: flex;
+    background-color: #1C1C1C;
+    color: aliceblue;
+    align-items: center;
+    justify-content: space-around;
+
+            .header-top-cont-left{
+                display: flex;
+                align-items: center;
+
+                    .clinic-p {
+                        margin-right: 10px;
+                        }
+
+                        .clinic-list {
+                            list-style: none;
+                            padding: 0;
+                            margin: 0;
+                            display: inline;
+                            margin-right: -30px;
+
+                            .clinic-list-li{
+                                cursor: pointer;
+                            }
+}
+}  
+}
+
+.search-container {
+    position: relative;
+  }
+  
+  .search-popup {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 60px;
+    width: 0;
+    height: 100%;
+    overflow: hidden;
+    transition: width 0.3s ease;
+  }
+  
+  .search-input {
+    width: 100%;
+    height: 40px;
+    box-sizing: border-box;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+  }
+  
+  .search-popup.open {
+    width: 50vw;
+    right: 60px;
+
+  }
+
+
+.header-top-cont-right{
+    display: flex;
+    flex-direction: column;
+    
+
+    .number{
+        padding: 0;
+        margin: 10px 0 0 0;
+        height: 1vh;
+    }
+
+    .number-info{
+        font-size: 10px;
+    }
+
+}
+
+
+
+.header-bot{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #161616;
+    height: 20%;
+    border-bottom: 1px solid rgba(213, 211, 211, 0.1);
+
+    .header-bot-button{
+        display: flex;
+        align-items: center;
+        
+
+        .search{
+            display: flex;
+            margin-right: -40px;
+        }
+    }
+}
+.uslugi{
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+
+
+    .uslugi-ul{
+        display: flex;
+        column-gap: 50px;
+       
+        .uslugi-li{
+            position: relative; 
+            padding-bottom: 5px;
+            color: rgb(255, 255, 255);
+            list-style: none;
+            cursor: pointer;
+            
+        }
+    }
+}
+
+.uslugi-li::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: rgb(190, 184, 184);
+    transition: width 0.3s ease, color 0.3s ease; /* Плавные переходы для ширины подчеркивания и цвета текста */
+}
+
+.uslugi-li:hover::after {
+    width: 100%;
+    color: rgb(190, 184, 184); /* Изменение цвета текста при наведении */
+}
+
+.header-bot-button-button{
+    max-width: 180px;
+    height: 40px;
+    border: none;
+    padding: 10px 10px 10px 10px;
+    margin: 0;
+    background: rgb(248, 248, 248);
+    border-radius: 10px;
+    color: inherit;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 300;
+    cursor: pointer;
+    outline: none;
+    text-align: center;
+    white-space: nowrap;
+}
+
+
+
+
+
+
+/* Медиа-запросы для верхнего app bar */
+@media (max-width: 950px) {
+    .uslugi{
+        display: flex;
+        align-items: center;
+    
+    
+        .uslugi-ul{
+            display: flex;
+            column-gap: 20px;
+           
+            
+        } 
+    }
+}
+
+@media (max-width: 830px) {
+    .uslugi{
+        display: flex;
+        align-items: center;
+    
+    
+        .uslugi-ul{
+            display: flex;
+            column-gap: 8px;
+            margin-left: -30px;
+           
+            
+        } 
+    }
+
+    .medic{
+        width: 150px;
+        height: auto;
+        margin: 10px 0 10px 0;
+    
+    }
+}
+
+@media (max-width: 730px){
+
+    .medic{
+        width: 100px;
+        height: auto;
+        margin: 10px 0 10px 0;
+    
+    }
+
+
+        .header-bot-button-button{
+            width: 130px;
+            height: 20px;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+
+        }
+
+        .uslugi-li{
+            font-size: 13px;
+        }
+}
+
+
+@media (max-width: 560px){
+    .uslugi-li{
+        display: none;
+    }
+}
+
+
+@media (max-width: 560px){
+    .header-top-cont-left{
+        font-size: 10px;
+    }
+
+    .metro{
+        width: 20px;
+        height: auto;
+    }
+
+    .whts{
+        width: 25px;
+        height: auto;
+    }
+
+    .telegr{
+        width: 25px;
+        height: auto;
+    }
+
+    .messeg{
+            margin-right: -30px;
+    }
+}
+
+@media (max-width: 470px){
+
+    .header-top-cont{
+        display: none;
+    }
+
+}
+
+/* Стили для размера экрана от 320px до 420px */
+@media (min-width: 1px) and (max-width: 420px) {
+    .header-bot-button-button {
+        display: none;
+    }
+}

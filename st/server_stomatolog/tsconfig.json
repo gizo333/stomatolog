@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "target": "es6",
+        "module": "commonjs",
+        "esModuleInterop": true,
+        "experimentalDecorators": true,
+        "resolveJsonModule": true,
+        "emitDecoratorMetadata" : true,
+    
+    },
+    "include": ["**/*.ts"],
+    "exclude": ["node_modules", "**/*.js"]
+  }
+  
