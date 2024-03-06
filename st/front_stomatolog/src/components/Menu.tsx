@@ -5,7 +5,6 @@ import menu from '../img/menu.svg';
 import arrow from '../img/down-arrow.svg';
 import { Link } from 'react-router-dom';
 
-// Интерфейс для определения структуры элемента меню
 interface MenuItem {
   label: string;        // Текст, отображаемый в меню
   link?: string;        // Ссылка, на которую переходит элемент меню (опционально)
@@ -18,27 +17,20 @@ interface BurgerMenuProps {
   items: MenuItem[];    // Массив элементов меню
 }
 
-// Компонент BurgerMenu, представляющий собой бургер-меню
 const BurgerMenu: React.FC<BurgerMenuProps> = ({ items }) => {
-  // Состояние для отслеживания открытия/закрытия меню
   const [open, setOpen] = useState(false);
 
-  // Функция для переключения состояния меню
   const toggleMenu = () => {
     setOpen((prevOpen) => !prevOpen);
   };
 
   return (
-    // Обертка для бургер-меню
     <div className='burger-menu-container'>
-      {/* Кнопка открытия/закрытия меню */}
       <button className='menu-button' onClick={toggleMenu}>
         <img className='burger-icon' src={menu} alt="Open menu" />
       </button>
-      {/* Если меню открыто, отображаем его содержимое */}
       {open && (
         <div className='burger-menu'>
-          {/* Формируем список элементов меню на основе переданных пропсов */}
           <ul>
             {items.map((menuItem, index) => (
               <MenuItemComponent key={index} item={menuItem} />
@@ -50,18 +42,15 @@ const BurgerMenu: React.FC<BurgerMenuProps> = ({ items }) => {
   );
 };
 
-// Интерфейс для пропсов компонента MenuItemComponent
 interface MenuItemComponentProps {
   item: MenuItem; // Элемент меню
 }
 
-// Компонент MenuItemComponent, представляющий собой элемент меню
 const MenuItemComponent: React.FC<MenuItemComponentProps> = ({ item }) => {
   // Состояние для отслеживания открытия/закрытия подменю
   
   const [openSubMenu, setOpenSubMenu] = useState(false);
 
-  // Функция для переключения состояния подменю
   const toggleSubMenu = () => {
     setOpenSubMenu((prevOpen) => !prevOpen);
   };
@@ -93,7 +82,6 @@ const MenuItemComponent: React.FC<MenuItemComponentProps> = ({ item }) => {
 
 };
 
-// Массив элементов меню для примера
 export const menuItems: MenuItem[] = [
   {
     label: 'Услуги',
@@ -114,5 +102,4 @@ export const menuItems: MenuItem[] = [
   { label: 'Contact', link: '/contact' },
 ];
 
-// Экспорт компонента BurgerMenu для использования в других частях приложения
 export default BurgerMenu;
