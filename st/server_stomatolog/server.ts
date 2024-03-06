@@ -8,7 +8,6 @@ import createToken from './jwt';
 const app = express();
 const port = 4199;
 
-// Промежуточное ПО для обработки тела запроса в формате JSON
 app.use(bodyParser.json());
 
 app.use(cors({ origin: '*' }));
@@ -25,14 +24,12 @@ app.post('/register', async (req: Request, res: Response) => {
         return res.status(400).json({ error: 'Пользователь с таким email уже существует' });
       }
   
-      // Создание нового пользователя
       const newUser = await User.create({
         username,
         email,
         password,
       });
   
-      // Создание токена для нового пользователя
       const token = createToken(newUser);
   
       res.status(201).json({ token });
